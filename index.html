@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>دانلود فایل‌ها</title>
+    <title>دانلود فایل</title>
     <style>
         body {
             margin: 0;
@@ -43,33 +43,21 @@
     </style>
 </head>
 <body>
-    <button class="button" onclick="downloadFiles()">دانلود فایل‌ها</button>
+    <button class="button" onclick="downloadFile()">دانلود فایل</button>
 
     <script>
-        function downloadFiles() {
-            const files = [
-                {
-                    url: 'https://raw.githubusercontent.com/mahdiklidari190/Java/main/MyAdapter.java',
-                    name: 'MyAdapter.java'
-                },
-                {
-                    url: 'https://raw.githubusercontent.com/mahdiklidari190/Java/main/listveo.java',
-                    name: 'listveo.java'
-                },
-                {
-                    url: 'https://raw.githubusercontent.com/mahdiklidari190/Java/main/sss.java',
-                    name: 'sss.java'
-                }
-            ];
+        function downloadFile() {
+            const file = {
+                url: 'https://raw.githubusercontent.com/mahdiklidari190/Java/main/m.rar',
+                name: 'm.rar'
+            };
 
-            files.forEach(file => {
-                const link = document.createElement('a');
-                link.href = file.url;
-                link.download = file.name;
-                document.body.appendChild(link);
-                link.click();
-                document.body.removeChild(link);
-            });
+            const link = document.createElement('a');
+            link.href = file.url;
+            link.download = file.name;
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
         }
     </script>
 </body>
